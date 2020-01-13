@@ -9,15 +9,15 @@ class Members extends React.Component {
         };
     }
 
-    componentDidMount() {
-        //do an axios call to grab our secret message!
-        axios.get("/api/protected")
-            .then(result => this.setState({ message: result.data.message }))
-            .catch(err => {
-                console.log(err);
-                this.props.onError();
-            });
-    }
+    // componentDidMount() {
+    //     //do an axios call to grab our secret message!
+    //     axios.get("/api/protected")
+    //         .then(result => this.setState({ message: result.data.message }))
+    //         .catch(err => {
+    //             console.log(err);
+    //             this.props.onError();
+    //         });
+    // }
 
     render() {
         return (

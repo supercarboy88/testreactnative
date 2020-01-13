@@ -20,7 +20,7 @@ const passport = require("./config/passport");
 
 //connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactpassportexampledb2",
+  process.env.MONGODB_URI || "mongodb://heroku_1svm6p7z:rn35fp876dmqd1bia4ja5e5elr@ds155268.mlab.com:55268/heroku_1svm6p7z",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

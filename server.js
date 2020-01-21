@@ -20,7 +20,7 @@ const passport = require("./config/passport");
 
 //connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://heroku_1svm6p7z:rn35fp876dmqd1bia4ja5e5elr@ds155268.mlab.com:55268/heroku_1svm6p7z",
+  process.env.MONGODB_URI || "mongodb://localhost/reactpassportexampledb03",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -47,7 +47,7 @@ if (process.env.NODE_ENV !== "production") {
 //Set up our session
 const sessionConfig = {
   store: new MongoSessionStore({ mongooseConnection: mongoose.connection }), //this line says we're going to use the connection to the db we already have
-  secret: 'keyboard cat',
+  secret: process.env.COOKIE_SECRET,
   resave: false,
   saveUninitialized: true,
   cookie: {},
